@@ -15,7 +15,7 @@ const timeLesson = ['onetime', 'twotime', 'threetime', 'fourtime', 'fivetime', '
 
 var now = new Date();
 var _day_ = now.getDay();
-_day_ = _day_ == 0 || _day_ > 4 ? 0 : _day_ - 1;
+_day_ = _day_ == 0 || _day_ > 5 ? 0 : _day_ - 1;
 var day_ = document.getElementById('Day');
 day_.innerHTML = days[_day_];
 day_.style.cssText = "margin: 50px; font-size: 100px; text-align: center;";
