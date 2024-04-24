@@ -22,7 +22,7 @@ span { /* Кнопки */
 }
 
 span:hover { /* Кнопки при наведении курсора */
-    background: #c6c6c6;
+    background: #ffffff;
 }
 
 span:active { /* Кнопки при нажатии */
