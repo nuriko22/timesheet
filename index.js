@@ -34,7 +34,12 @@ const numLesson = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight
 const timeLesson = ['onetime', 'twotime', 'threetime', 'fourtime', 'fivetime', 'sixtime', 'seventime', 'eighttime'];
 
 var now = new Date();
+str = now.toLocaleString().split(' ');
+time = str[1].split(':')[0];
+ampm = str[2];
 var _day_ = now.getDay();
+if (ampm) {_day_ = ampm == "PM" & time >= 5 ? _day_ + 1 : _day_;}
+else {_day_ = time >= 17 ? _day_ + 1 : _day_;}
 _day_ = _day_ == 0 || _day_ > 5 ? 0 : _day_ - 1;
 var day_ = document.getElementById('Day');
 day_.innerHTML = days[_day_];
