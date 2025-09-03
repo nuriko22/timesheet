@@ -22,7 +22,7 @@ var now = new Date();
 str = now.toLocaleString().split(' ');
 time = str[1].split(':')[0];
 ampm = str[2];
-var _day_ = now.getDay();
+var _day_ = now.getDay() - 1;
 var day_ = document.getElementById('Day');
 day_.innerHTML = days[_day_];
 day_.style.cssText = "margin: 30px; font-size: 70px; text-align: center;";
@@ -52,4 +52,5 @@ function button(a){
         time.style.cssText = "font-size: 55px; text-align: center;";
 }
 }
+
 
